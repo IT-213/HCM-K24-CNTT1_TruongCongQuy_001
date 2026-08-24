@@ -1,0 +1,23 @@
+Trương Công Quý đề 1:
+
+Câu 1:
+a/ Giải pháp thiết kế cấu hình:
+- application.yml: File cấu hình chung lưu trữ các thiết lập hệ thống cố định và chỉ định môi trường nào đang được kích hoạt.
+-application-local.yml: Chứa các thông số riêng cho môi trường cục bộ và tên model.
+-application-cloud.yml: Chứa các thông số riêng cho dịch vụ đáp mây và trỏ API Key từ biến môi trường OS để bảo mật.
+
+b/ Nguyên lý kiến trúc tầng trừu tượng
+Áp dụng nguyên lý đảo ngược phụ thuộc 
+- Tầng nghiệp vụ chính chỉ làm việc với interface trừu tượng
+- Tầng nghiệp vụ không phụ thuộc trực tiếp hay biết đến sự tồn tại của các class bên dưới
+Mô hình Strategy pattern kết hợp điều kiện nạp bean
+- Tạo các lớp thực thi chi tiết cùng triển khai interface
+- Dựa vào môi trường đang được kích hoạt tương ứng sẽ chỉ khởi tạo duy nhất một bean của nhà cung cấp đó và tiêm vào chatModel
+
+
+Câu 2:
+a/ 
+Điều chỉnh tham số kiểm soát hành vi AI
+- Temperature bằng 0 giảm độ sáng tạo câu trả lời mang tính quyết định ép AI trích xuất các dữ liệu từ hóa đơn thay vì tự suy diễn 
+- Top_K bằng 1 giới hạn không gian chọn từ vựng chỉ cho phép ai chọn các chuỗi kí tự có xác suất cao nhất 
+Cơ chế ép buộc định dạng đầu ra
