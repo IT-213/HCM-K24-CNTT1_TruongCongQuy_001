@@ -20,4 +20,4 @@ a/
 Điều chỉnh tham số kiểm soát hành vi AI
 - Temperature bằng 0 giảm độ sáng tạo câu trả lời mang tính quyết định ép AI trích xuất các dữ liệu từ hóa đơn thay vì tự suy diễn 
 - Top_K bằng 1 giới hạn không gian chọn từ vựng chỉ cho phép ai chọn các chuỗi kí tự có xác suất cao nhất 
-Cơ chế ép buộc định dạng đầu ra
+Ép buộc định dạng đầu ra của AI
