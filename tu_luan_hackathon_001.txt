@@ -18,6 +18,11 @@ Mô hình Strategy pattern kết hợp điều kiện nạp bean
 Câu 2:
 a/ 
 Điều chỉnh tham số kiểm soát hành vi AI
-- Temperature bằng 0 giảm độ sáng tạo câu trả lời mang tính quyết định ép AI trích xuất các dữ liệu từ hóa đơn thay vì tự suy diễn 
-- Top_K bằng 1 giới hạn không gian chọn từ vựng chỉ cho phép ai chọn các chuỗi kí tự có xác suất cao nhất 
+Temperature bằng 0 giảm độ sáng tạo câu trả lời mang tính quyết định ép AI trích xuất các dữ liệu từ hóa đơn thay vì tự suy diễn 
+Top_K bằng 1 giới hạn không gian chọn từ vựng chỉ cho phép ai chọn các chuỗi kí tự có xác suất cao nhất 
 Ép buộc định dạng đầu ra của AI
+
+b/
+
+Sử lý ngoại lệ ở tầng ứng dụng
+Để tránh việc AI trả dữ liệu thiết trường bắt buộc cần phải validate response đảm bảo dữ liệu trả về phải toàn vẹn và được RECORD, DB.... và data parse error cần thiết kế đưa một biến current_data để AI có mốc thời gian sử lý các trường hợp như ( thứ 2 tuần sau, 3 ngày nữa...) và cần đảm bảo validate dữ liệu đầu vào cho ai sử lý
